@@ -1,0 +1,27 @@
+{% extends "AppMascota/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+<h1 class="mb-5">RESULTADOS DE LA BUSQUEDA</h1>
+
+
+
+
+{% if busqueda %}
+<ul>
+    {% for raza in busqueda %}
+        <li>Raza: {{raza.raza}}</li>
+        <li>Nombre de la mascota con esa raza: {{raza.nombre}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<h2 style="color: blue"> No existe un perrito con estos datos!</h2>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">BUSQUEDA DE RAZAS</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'resultado_busqueda' %}" method="GET">
+
+    <input type="text" name="raza" id="raza">
+    
+    <input type="submit" value="Buscar mascota">
+
+
+</form>
+
+
+
+{% endblock %}
